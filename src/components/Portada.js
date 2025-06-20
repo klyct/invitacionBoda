@@ -58,8 +58,10 @@ export default function Portada() {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('/assets/ambos_26.JPG')" }}
       />
-      {/* Overlay general */}
+      {/* Overlay general 
       <div className="absolute inset-0 bg-[#c798c8] opacity-50 mix-blend-screen  pointer-events-none" />
+      ESCALAR IMAGEN PARA CELULAR
+      */}
       {/* Brillo suave */}
       <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-[#c798c8] via-transparent to-transparent pointer-events-none" />
 

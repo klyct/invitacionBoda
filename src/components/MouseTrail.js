@@ -1,53 +1,3 @@
-
-// export default function MouseTrail() {
-//   useEffect(() => {
-//     const trailContainer = document.createElement("div");
-//     trailContainer.style.position = "fixed";
-//     trailContainer.style.top = 0;
-//     trailContainer.style.left = 0;
-//     trailContainer.style.width = "100%";
-//     trailContainer.style.height = "100%";
-//     trailContainer.style.pointerEvents = "none";
-//     trailContainer.style.zIndex = 9999;
-//     document.body.appendChild(trailContainer);
-
-//     const config = {
-//       sparkleLifetime: 1500, // Tiempo de vida en ms (1.5 segundos)
-//       spawnProbability: 0.4, // Probabilidad de que aparezca un sparkle (70%)
-//       spawnFrequency: 1, // Cada cuántos eventos crear un sparkle (1 = cada vez)
-//     };
-
-//     let moveCount = 0;
-
-//     const createSparkle = (x, y) => {
-//       const sparkle = document.createElement("div");
-//       sparkle.className = "sparkle";
-//       sparkle.style.left = `${x}px`;
-//       sparkle.style.top = `${y}px`;
-//       sparkle.innerHTML = "♥";
-//       trailContainer.appendChild(sparkle);
-
-//       setTimeout(() => {
-//         sparkle.remove();
-//       }, config.sparkleLifetime);
-//     };
-
-//     const handleMouseMove = (e) => {
-//       const el = document.elementFromPoint(e.clientX, e.clientY);
-//       const isPurple = el?.closest(".bg-morado"); // ✅ Clase auxiliar válida
-//       const color = isPurple ? "#ffffff" : "#c798c8"; // blanco sobre fondo morado, morado sobre fondo blanco
-
-//       createSparkle(e.clientX, e.clientY, color);
-//     };
-
-//     window.addEventListener("mousemove", handleMouseMove);
-//     return () => window.removeEventListener("mousemove", handleMouseMove);
-//   }, []);
-
-//   return null;
-// }
-
-
 import React, { useEffect } from "react";
 
 // Función throttle para limitar la frecuencia
@@ -112,7 +62,7 @@ export default function MouseTrail() {
       ) {
         const el = document.elementFromPoint(x, y);
         const isPurple = el?.closest(".bg-morado");
-        const color = isPurple ? "#ffffff" : "#c798c8";
+        const color = isPurple ? "#ffffff" : "#ff7ea8";
 
         createSparkle(x, y, color);
 

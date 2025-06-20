@@ -4,7 +4,7 @@ import { Navigation, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
-
+// CAMBIAR FLECHAS AA AZULES
 const imagenes = [
   { src: "/assets/manos_ambos.JPG", alt: "26" },
   { src: "/assets/mano_anilo.JPG", alt: "26" },

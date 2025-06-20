@@ -201,7 +201,7 @@
   position: absolute;
   width: 120px;
   height: 120px;
-  background-color: var(--sparkle-color, #ff69b4);
+  background-color: var(--sparkle-color, #ff7ea8);
   opacity: 1;
   pointer-events: none;
   user-select: none;
