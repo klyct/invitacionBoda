@@ -4,7 +4,6 @@ import { Navigation, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
-// CAMBIAR FLECHAS AA AZULES
 const imagenes = [
   { src: "/assets/manos_ambos.JPG", alt: "26" },
   { src: "/assets/mano_anilo.JPG", alt: "26" },
@@ -40,7 +39,10 @@ export default function CarruselHistoria() {
       <Swiper
         modules={[Navigation, Autoplay]}
         autoplay={{ delay: 6000 }}
-        navigation
+        navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }}
         loop
         spaceBetween={8}
         slidesPerView="auto"
@@ -48,6 +50,8 @@ export default function CarruselHistoria() {
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
         className="px-4"
       >
+        <div className="swiper-button-prev !text-white after:!text-3xl"></div>
+        <div className="swiper-button-next !text-white after:!text-3xl"></div>
         {imagenes.map((img, i) => {
           const isActive = i === activeIndex;
 
@@ -74,7 +78,7 @@ export default function CarruselHistoria() {
         })}
       </Swiper>
 
-      <p className="mt-8 text-xl font-roboto text-[#c798c8] max-w-xl mx-auto">
+      <p className="pt-8 px-8 text-xl font-roboto text-[#c798c8] max-w-xl mx-auto">
         “Nuestro amor crece con cada sonrisa, con cada abrazo, con cada mirada.”
       </p>
     </section>
