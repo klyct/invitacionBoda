@@ -82,19 +82,20 @@ export default function MouseTrail() {
     trailContainer.style.zIndex = 9999;
     document.body.appendChild(trailContainer);
 
-    // Configuración
     const config = {
-      sparkleLifetime: 1500, // Tiempo de vida (ms)
-      spawnInterval: 100, // Cada cuántos ms aparece un sparkle (¡ajusta aquí!)
+      sparkleLifetime: 1500,
+      spawnInterval: 300,
+      minDistance: 20, // mínimo de píxeles que debe moverse el mouse para crear otro corazón
     };
+
+    let lastPos = { x: null, y: null };
 
     const createSparkle = (x, y, color) => {
       const sparkle = document.createElement("div");
       sparkle.className = "sparkle";
       sparkle.style.left = `${x}px`;
       sparkle.style.top = `${y}px`;
-      sparkle.style.color = color; // Usamos color en lugar de backgroundColor
-      sparkle.innerHTML = "♥";
+      sparkle.style.setProperty("--sparkle-color", color);
       trailContainer.appendChild(sparkle);
 
       setTimeout(() => {
@@ -102,12 +103,21 @@ export default function MouseTrail() {
       }, config.sparkleLifetime);
     };
 
-    // Función throttled
     const throttledMouseMove = throttle((e) => {
-      const el = document.elementFromPoint(e.clientX, e.clientY);
-      const isPurple = el?.closest(".bg-morado");
-      const color = isPurple ? "#ffffff" : "#c798c8";
-      createSparkle(e.clientX, e.clientY, color);
+      const { clientX: x, clientY: y } = e;
+
+      if (
+        lastPos.x === null ||
+        Math.hypot(x - lastPos.x, y - lastPos.y) >= config.minDistance
+      ) {
+        const el = document.elementFromPoint(x, y);
+        const isPurple = el?.closest(".bg-morado");
+        const color = isPurple ? "#ffffff" : "#c798c8";
+
+        createSparkle(x, y, color);
+
+        lastPos = { x, y };
+      }
     }, config.spawnInterval);
 
     window.addEventListener("mousemove", throttledMouseMove);
@@ -117,6 +127,7 @@ export default function MouseTrail() {
       trailContainer.remove();
     };
   }, []);
+
 
   return null;
 }

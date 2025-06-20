@@ -199,22 +199,25 @@
 
 .sparkle {
   position: absolute;
-  font-size: 16px;
-  color: #ff69b4;
-  opacity: 0.8;
-  animation: sparkleAnim 2.0s ease-out forwards;
+  width: 120px;
+  height: 120px;
+  background-color: var(--sparkle-color, #ff69b4);
+  opacity: 1;
   pointer-events: none;
   user-select: none;
-  font-family: "Arial", sans-serif; /* puedes usar una fuente linda como cursiva o serif */
+  animation: sparkleHeart 1.5s ease-out forwards;
+  transform: translate(-50%, -50%);
+  clip-path: path("M 58,17 C 52,7 42,0 30,0 C 13,0 0,13 0,30 C 0,63 18,68 58,106 C 98,68 116,63 116,30 C 116,13 103,0 86,0 C 74,0 64,7 58,17 z");
 }
 
-@keyframes sparkleAnim {
+@keyframes sparkleHeart {
   0% {
-    transform: translate(0, 0) scale(1);
+    transform: translate(-50%, -50%) scale(0.1);
     opacity: 1;
   }
   100% {
-    transform: translateY(-30px) scale(0.8) rotate(10deg);
+    transform: translate(-50%, -80%) scale(0.25);
     opacity: 0;
+    filter: blur(2px);
   }
 }
