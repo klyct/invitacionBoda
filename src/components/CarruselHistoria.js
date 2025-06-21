@@ -27,6 +27,7 @@ const imagenes = [
   { src: "/assets/ambos_22.JPG", alt: "22" },
   { src: "/assets/ambos_24.JPG", alt: "24" },
   { src: "/assets/ambos_25.JPG", alt: "25" },
+  { src: "/assets/maincra_1.JPG", alt: "25" },
 ];
 
 export default function CarruselHistoria() {
