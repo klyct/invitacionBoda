@@ -90,6 +90,7 @@ export default function DetallesBoda({ invitado }) {
         {invitado && (
             <div className="bg-white shadow-xl rounded-2xl p-6">
             <p className="font-alexbrush font-semibold text-[#4c044d] text-3xl">Tu Invitación</p>
+            <p>{invitado.nombre}</p>
             <p>Invitados: {invitado.cantidad}</p>
               
               {confirmacionLocal === true ? (
