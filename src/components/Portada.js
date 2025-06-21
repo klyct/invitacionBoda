@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import './../index.css'
 
 const imagenes = {
-  normal: "/assets/ambos_1.JPG",
-  izquierda: "/assets/alex_1.jpg",
-  derecha: "/assets/kim_1.jpg",
+  normal: "/assets/ambos_23.JPG",
+  izquierda: "/assets/alex_3.JPG",
+  derecha: "/assets/kim_1.JPG",
 };
 
 const variantesImagen = {

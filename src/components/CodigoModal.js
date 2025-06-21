@@ -106,7 +106,7 @@ export default function CodigoModal({ isOpen, onConfirm, onClose }) {
                 onChange={(e) => setCodigo(e.target.value)}
                 onKeyPress={handleKeyPress}
                 className="border p-2 rounded mb-4 w-full focus:ring-2 focus:ring-[#4c044d] focus:border-[#4c044d]"
-                placeholder="Ej: ABC123"
+                placeholder="Ej: AB12"
                 autoFocus
                 disabled={loading}
               />
