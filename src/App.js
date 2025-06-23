@@ -5,7 +5,6 @@ import CarruselHistoria from "./components/CarruselHistoria";
 import DetallesBoda from "./components/DetallesBoda";
 import Wishlist from "./components/Wishlist";
 import MouseTrail from "./components/MouseTrail";
-
 import CodigoModal from "./components/CodigoModal";
 
 function App() {
