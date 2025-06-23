@@ -6,6 +6,7 @@ import DetallesBoda from "./components/DetallesBoda";
 import Wishlist from "./components/Wishlist";
 import MouseTrail from "./components/MouseTrail";
 import CodigoModal from "./components/CodigoModal";
+import ScrollIndicator from "./components/Scroll";
 
 function App() {
   
@@ -28,6 +29,7 @@ function App() {
         <Portada />
         <CuentaRegresiva />
       </div>
+      <ScrollIndicator/>
       <CarruselHistoria />
       <DetallesBoda invitado={invitado} />
       <Wishlist invitado={invitado} />
