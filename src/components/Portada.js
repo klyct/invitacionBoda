@@ -94,7 +94,7 @@ export default function Portada() {
 
       <div className="relative z-10 flex flex-col items-center justify-center">
         <div className="m-4 text-center text-[#fff]">
-          <p className="text-xl font-roboto italic">18 Julio 2025</p>
+          <p className="text-xl font-roboto italic">19 Julio 2025</p>
         </div>
 
         

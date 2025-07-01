@@ -84,7 +84,7 @@ export default function DetallesBoda({ invitado }) {
       <div className="max-w-3xl mx-auto space-y-6 text-lg text-[#c798c8]">
         <div className="bg-white shadow-xl rounded-2xl p-6">
           <p className="font-alexbrush font-semibold text-[#4c044d] text-3xl">Civil</p>
-          <p className="mt-1">Viernes, 18 de Julio de 2025</p>
+          <p className="mt-1">Sábado, 19 de Julio de 2025</p>
         </div>
 
         {invitado && (
@@ -141,8 +141,8 @@ export default function DetallesBoda({ invitado }) {
 
         <div className="bg-white shadow-xl rounded-2xl p-6">
           <p className="font-alexbrush font-semibold text-[#4c044d] text-3xl">Recepción</p>
-          <p className="mt-1">Hora: Por confirmar</p>
-          <p>Dirección: Por confirmar</p>
+          <p className="mt-1">Hora: 1:00 PM</p>
+          <p>Dirección: Guillermo Prieto 201-Local 1, Alameda, 38050 Celaya, Gto.</p>
         </div>
 
         <div className="bg-white shadow-xl rounded-2xl p-6">

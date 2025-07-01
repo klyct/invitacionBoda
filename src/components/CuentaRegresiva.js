@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 export default function CuentaRegresiva() {
-  const fechaObjetivo = new Date("2025-07-18T00:00:00");
+  const fechaObjetivo = new Date("2025-07-19T00:00:00");
   const [tiempoRestante, setTiempoRestante] = useState({});
 
   useEffect(() => {
