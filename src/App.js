@@ -7,6 +7,7 @@ import Wishlist from "./components/Wishlist";
 import MouseTrail from "./components/MouseTrail";
 import CodigoModal from "./components/CodigoModal";
 import ScrollIndicator from "./components/Scroll";
+import DueloAmor from "./components/DueloAmor";
 
 function App() {
   
@@ -33,6 +34,7 @@ function App() {
       <CarruselHistoria />
       <DetallesBoda invitado={invitado} />
       <Wishlist invitado={invitado} />
+      <DueloAmor />
     </div>
   );
 }
